@@ -1,0 +1,35 @@
+-
+  const menus = [
+    {
+      name:"トップ",
+      url:`${path}/index.html`
+    },
+    {
+      name:"当社について",
+      url:`${path}/about/index.html`
+    },
+    {
+      name:"サービス",
+      url:`${path}/service/index.html`
+    },
+    {
+      name:"導入事例",
+      url:`${path}/results/index.html`
+    },
+    {
+      name:"お知らせ",
+      url:`${path}/news/index.html`
+    },
+  ];  
+
+header.header
+  .header__inner
+    .header__title.c-main-title Global Standard
+    nav.header__nav
+      each menu in menus
+        a.header__list.list(href=`${menu.url}`) #{menu.name}
+    .header__btn-box
+      a.download__btn.c-white-btn.btn 資料ダウンロード
+      a.contact__btn.c-blue-btn.btn お問い合わせ
+    .header-menu-hamburger
+      .header-hamburger-item

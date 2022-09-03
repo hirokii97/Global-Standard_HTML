@@ -1,0 +1,129 @@
+@use "../global" as global;
+
+header{
+  background: #FFF;
+}
+
+.header__inner{
+  padding: 16px;
+  
+  @include global.mq("sp") {
+    padding: 11px 20px;
+    display: flex;
+    align-items: center;
+  }
+  @include global.mq("tab") {
+    display: flex;
+    align-items: center;
+  }
+
+  width: 100%;
+  // width: global.$header-width;
+  margin: 0 auto;
+  display: flex;
+  align-items:center
+  
+}
+
+.header__title{
+  flex: 1;
+  font-size: 40px;
+  color: global.$main-color;
+
+  @include global.mq(sp) {
+    font-size: 28px;
+  }
+}
+
+.header__nav{
+  display: flex;
+
+  @include global.mq("tab") {
+    display: none;
+  }
+  @include global.mq("sp") {
+    display: none;
+  }
+
+  position: relative;
+  font-size: 14px;
+
+  :nth-child(n + 2){
+    margin-left: 46px;
+
+    &::before{
+      position: absolute;
+      content: "／";
+      top: 0px;
+      transform:translate(-24px, -1px);
+
+    }
+  }
+}
+
+.header__btn-box{
+  margin-left: 32px;
+  display: flex;
+
+  @include global.mq("tab") {
+    display: none;
+  }
+  @include global.mq("sp") {
+    display: none;
+  }
+
+  a{
+    width: 176px;
+    font-size: 14px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+.contact__btn{
+  margin-left: 10px;
+}
+
+//ハンバーガーメニュー
+.header-menu-hamburger{
+  position: relative;
+
+  @include global.mq("pc") {
+    display: none;
+  }
+  }
+  
+.header-hamburger-item{
+    //真ん中
+    position: absolute;
+    display: inline-block;
+    content: "";
+    width: 28.75px;
+    height: 2px;
+    background-color: global.$main-color;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+
+    //下
+    &::after{
+      position: absolute;
+      display: inline-block;
+      content: "";
+      width: 28.75px;
+      height: 2px;
+      background-color: global.$main-color;
+      top:6.75px;
+    }
+
+    //上
+    &::before{
+      position: absolute;
+      display: inline-block;
+      content: "";
+      width: 28.75px;
+      height: 2px;
+      background-color: global.$main-color;
+      top:-6.75px;
+    }
+  }

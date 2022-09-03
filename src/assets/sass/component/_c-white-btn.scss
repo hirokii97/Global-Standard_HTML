@@ -1,0 +1,12 @@
+@use "../global" as global;
+
+.c-white-btn {
+  color: global.$main-color;
+  border: global.$main-color 1px solid;
+  background-color: #fff;
+
+  &:hover{
+    color: #FFF;
+    background-color: global.$main-color;
+  }
+}

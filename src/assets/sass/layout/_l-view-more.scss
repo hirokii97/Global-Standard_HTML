@@ -1,0 +1,26 @@
+@use "../global" as global;
+
+.l-view-more-pc{
+  @include global.mq('sp') {
+    display: none;
+  }
+}
+
+//viewーmoreを右寄せするため
+.l-view-more-box{
+  text-align: right;
+}
+
+.l-view-more-sp{
+  @include global.mq('pc') {
+    display: none;
+  }
+  @include global.mq('tab') {
+    display: none;
+  }
+  @include global.mq('sp') {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 22px;
+  }
+}

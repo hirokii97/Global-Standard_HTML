@@ -1,0 +1,25 @@
+@use "../global" as global;
+
+.news{
+  padding-top: 166px;
+  padding-bottom: 160px;
+  
+  @include global.mq('sp') {
+    padding-top: 60px;
+    padding-bottom: 110px;
+  }
+}
+
+.p-news__contents{
+  max-width: 768px;
+  width: 100%;
+  margin: 80px auto 0px auto;
+  padding: 60px 40px 40px 40px;
+  box-shadow: 0px 3px 12px #00000029;
+  
+  @include global.mq('sp') {
+    margin: 60px auto 0px auto;
+    padding: 40px 15px 40px 15px;
+  }
+}
+

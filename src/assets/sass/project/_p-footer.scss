@@ -1,0 +1,154 @@
+@use "../global" as global;
+
+footer{
+  width: 100%;
+  @include global.mq('sp') {
+    margin-top: 100px;
+  }
+}
+
+//ダウンロード・コンタクト
+.footer__order-box{
+  display: flex;
+  height: 100%;
+
+  
+  @include global.mq("sp") {
+    display: block;
+    
+  }
+}
+
+.order-box-type{
+  width: calc(100% / 2);
+  height: 100%;
+  padding-top: 56px;
+  padding-bottom: 50px;
+  
+  @include global.mq('sp') {
+    width: 100%;
+    padding-top: 45px;
+    padding-bottom: 26px;
+  }
+}
+
+.order-box-content{
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+//ボックスタイトル
+.order-box-title{
+  text-align: center;
+  color: global.$text-color-type2;
+}
+
+.order-box-main-title{
+  text-align: center;
+  font-size: 60px;
+}
+
+
+//View more
+.order-box{
+  height: 98px;
+  width: 315px;
+  margin-top: 40px;
+  margin: 40px auto 0px auto;
+}
+
+//View more aタグ
+.btn-view-more{
+  
+  display: inline-block;
+  width: 315px;
+  line-height: 98px;
+  font-size: 24px;
+  color: global.$accent-color-type1;
+  border: 3px global.$accent-color-type1 solid ;
+  position: relative;
+
+  &:hover{
+    color: global.$text-color-type1;
+    background-color: global.$accent-color-type1;
+
+    &::after{
+      background: url(../img/icon-arrow-right02.png) no-repeat center center / contain;
+      right: 8%;
+    }
+  }
+
+  //矢印
+  &::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10%;
+    background: url(../img/icon-arrow-right01.png) no-repeat center center / contain;
+    width: 20px;
+    height: 20px;
+
+  }
+}
+
+
+//ダウンロード
+.footer__download-box{
+  background: url(../img/img-download.png) no-repeat center center / cover ;
+  
+  @include global.mq('sp') {
+    background: url(../img/img-download.png) no-repeat center center / cover ;
+  }
+}
+
+//コンタクト
+.footer__contact-box{
+  background: url(../img/img-contact.png) no-repeat center center / cover
+}
+
+//最下層
+.footer-menu{
+  text-align: center;
+  background-color:global.$text-color-type1;
+  color: global.$text-color-type2;
+  padding-top: 114px;
+  padding-bottom: 19px;
+  
+  @include global.mq('sp') {
+    padding-top: 65px;
+    padding-bottom: 13px;  
+  }
+
+}
+
+.footer-menu__title{
+  font-family: global.$ff-en-title;
+  font-size: 52px;
+
+  @include global.mq('sp') {
+    font-size:40px;
+  }
+}
+
+.footer-menu__address{
+  margin:23px auto 0px auto;
+  width: 240px;
+  font-size: 14px;
+}
+
+.address-info{
+  text-align: left;
+}
+
+.footer-copyright{
+  margin-top: 80px;
+  font-size: 14px;
+  
+  @include global.mq('sp') {
+    margin-top: 40px;
+    font-size: 12px;
+    
+  }
+}

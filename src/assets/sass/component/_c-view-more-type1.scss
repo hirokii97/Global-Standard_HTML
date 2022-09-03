@@ -1,0 +1,80 @@
+@use "../global" as global;
+
+.c-view-more-link{
+  display: flex;
+  margin-top: 3px;
+
+  @include global.mq('sp') {
+    margin-top: 32px;
+  }
+}
+
+.c-view-more-sentence-type1{
+  color: global.$text-color-type2;
+  font-size: 32px;
+  @include global.mq('sp') {
+    font-size: 20px;
+  }
+}
+
+.c-view-more-arrow-box-type1{
+width: 140px;
+text-align: left;
+margin-left: 13px;
+margin-top: 14px;
+position: relative;
+
+  //円
+  &::after{
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: global.$accent-color-type1 3px solid;
+
+    position: absolute;
+    top: -14px;
+    left: 68px;
+  }
+
+  @include global.mq('sp') {
+    width: auto;
+    &::after{  
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: -16px;
+      left: 49px;
+      }
+    }
+}
+
+//矢印
+.c-view-more-arrow-type1{
+  display: inline-block;
+  margin-bottom: 4px;
+  width: 95px;
+  height: 7px;
+
+  border-bottom: 2px global.$text-color-type2 solid;
+  border-right: 2px global.$text-color-type2 solid;
+  transform: skew(45deg);
+  transition: all 0.5s 0s ease; 
+
+  @include global.mq('sp') {
+    width: 65px;
+    height: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+//リンクをhoverした時、矢印伸びる
+.c-view-more-link:hover .c-view-more-arrow-type1{
+  width: 100%;
+} 
+
+.case-study__view-more{
+  @include global.mq('sp') {
+    margin-top: 16px;
+  }
+}

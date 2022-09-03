@@ -1,0 +1,39 @@
+@use "../global" as global;
+
+.c-post-card{
+  border-bottom: #DDDDDD 1px solid;
+  padding-bottom: 32px;
+
+  &:nth-child(n + 2){
+    margin-top: 20px;
+  }
+}
+.c-post-sub-card{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.c-post-card-tag{
+display: inline-block;
+color: global.$accent-color-type2;
+border: global.$accent-color-type2 1px solid;
+padding: 8px 24px;
+
+@include global.mq('sp') {
+  font-size: 12px;
+  padding: 6px 20px;
+}
+}
+
+.c-post-card-date{
+  color: #888888;
+  font-size: 14px;
+}
+
+.c-post-card-title{
+  margin-top: 16px;
+  @include global.mq('sp') {
+    font-size: 14px;
+  }
+}

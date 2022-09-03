@@ -1,0 +1,53 @@
+//色
+$main-color:#163F74;// メインカラー
+$main-bold-color:#002A52;// メインカラー（濃）
+$main-light-color:#EEF3F8;// メインカラー（薄）
+$accent-color-type1:#FEF251;// アクセントカラー（黄色）
+$accent-color-type2:#D33365;// アクセントカラー（赤）
+$text-color-type1:#1A1A1A;// テキストカラー
+$text-color-type2:#FFFFFF;// テキストカラー
+$text-background-type1:#FFFFFF;// テキストカラー
+
+//フォント
+$ff-en: "Fira Sans" , sans-serif;//英字
+$ff-en-title: "Roboto" , sans-serif;//英字(タイトル)
+$ff-base: "Noto Sans JP" , sans-serif;//日本語標準
+$fz-base: 16px; // ベースフォントサイズ
+$fw-base: 500; // ベースフォントウェイト
+$lh-base: 1.6; // ベース行間
+
+// レイアウト
+$inner-width: 1104px; // インナー幅サイズ
+$header-width: 1248px; // インナー幅サイズ
+$sp-width: 768px; // スマホサイズ
+
+//ブレークポイント
+$breakpoints:(
+  //スマホ以下の場合
+  "sp": "screen and (max-width: #{$sp-width})",
+  //タブレット以下の場合
+  "tab": "screen and (max-width: #{$inner-width - 1px})",
+  //PC以下の場合
+  "pc": "screen and (min-width: #{$inner-width})",
+);
+
+//重なり順
+$layer: (
+  // ローディング
+  loading: 300,
+  // モーダル
+  modal: 100,
+  // ドロワー
+  drawer: 40,
+  // フローティング
+  floating: 30,
+  // ヘッダー
+  header: 20,
+  // フッター
+  footer: 10,
+  default: 1
+);
+
+
+
+

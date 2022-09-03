@@ -1,0 +1,26 @@
+@use "../global" as global;
+
+.c-title{
+  line-height: 121px;
+  font-size: 100px;
+  color:global.$main-color;
+  
+  @include global.mq('sp') {
+    line-height: 63px;
+    font-size: 52px;
+  }
+}
+
+.c-title-type2{
+  color: global.$main-color;
+  background-color: global.$text-color-type2;
+}
+
+.c-title-type3{
+  line-height: 121px;
+  font-size: 100px;
+  color:global.$text-color-type2;
+}
+
+
+

@@ -1,0 +1,78 @@
+@use "../global" as global;
+
+.case-study{
+  background: url(../img/bg-case.png) center center / cover no-repeat;
+  color: global.$text-color-type2;
+  padding-top: 100px;
+  padding-bottom: 120px;
+  
+  @include global.mq('sp') {
+    margin-top:60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.case-study__contents{
+
+}
+
+.case-study__cards{
+  display: flex;
+  justify-content: space-around;
+  gap: 40px ;
+  flex-wrap: wrap;
+  margin-top: 81px;
+  
+  @include global.mq('sp') {
+    gap: 52px ;
+  }
+}
+
+.case-study__card{
+  width: 320px;
+  position: relative;
+  
+  @include global.mq('sp') {
+    width: 335px;
+  }
+}
+
+.case-study__card-img{
+  width: 320px;
+
+  @include global.mq('sp') {
+    width: 335px;
+  }
+
+  img{
+    width: 100%;
+  }
+}
+
+.case-study__card-name{
+margin-top: 16px;
+@include global.mq('sp') {
+  margin-top: 12px;
+}
+}
+
+.case-study__card-tag{
+  margin-top: 12px;
+  font-size: 14px;
+  border: global.$text-color-type2 1px solid;
+  padding: 6px 32px;
+  display: inline-block;
+  text-align: center;
+
+}
+
+.case-study__card-more{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  right: 7px;
+
+}

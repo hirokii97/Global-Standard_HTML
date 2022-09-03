@@ -1,0 +1,86 @@
+@use "../global" as global;
+
+.p-top__contents{
+  background: url(../img/img-mv01_pc.png) no-repeat center center / cover;
+  height:700px;
+  width: 100%;
+  max-width: calc(100% - 91px);
+  margin-left: 91px;
+  
+  @include global.mq('sp') {
+    height:607px;
+    margin-left: 40px;
+    max-width: calc(100% - 40px);
+  }
+}
+
+.p-top__message{
+  position: absolute;
+  left: 50px;
+  top: 535px;
+  
+  @include global.mq('sp') {
+    left: 20px;
+    top: 447px;
+  }
+}
+
+
+.p-top__message-title{
+  line-height: 72px;
+  font-size: 60px;
+  display: flex;
+  width: 466px;
+  flex-wrap: wrap;
+  
+  @include global.mq('sp') {
+    width: 317px;
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
+.p-top__message-item{
+    margin-top: 16px;
+    border: none;
+  }
+
+.sp-message-title{
+  @include global.mq('sp') {
+    display: none;
+  }
+}
+
+.message-title1{
+  display: inline-block;
+}
+
+.message-title2{
+  display: none;
+  @include global.mq('sp') {
+    display: block;
+    padding-left: 10px;
+    border: none;
+  }
+}
+
+.p-top__message-subtitle{
+  display: inline-block;
+  margin-top: 16px;
+  background: global.$main-color;
+  color: global.$text-color-type2;
+  line-height: 31px;
+  font-size: 20px;
+  font-weight: 700;
+  
+  @include global.mq('sp') {
+    font-size: 16px;
+  }
+}
+
+.sp-br{
+  display:none;
+  @include global.mq('sp') {
+    display:block;
+  }
+}

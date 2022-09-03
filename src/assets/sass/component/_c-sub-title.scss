@@ -1,0 +1,13 @@
+@use "../global" as global;
+
+.c-sub-title{
+  color:global.$main-color;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.c-sub-title-type2{
+  color:global.$text-color-type2;
+  font-size: 24px;
+  font-weight: 700;
+}

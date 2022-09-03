@@ -1,0 +1,80 @@
+@use "../global" as global;
+
+.service{
+  padding-top: 121px;
+  padding-bottom: 106px;
+  
+  @include global.mq('sp') {
+    padding-top: 60px;
+    padding-bottom: 103px;
+  }
+}
+
+.service__cards{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 33px;
+  
+  @include global.mq('sp') {
+    display: inline-block;
+  }
+}
+
+.service__card{
+  width: 352px;
+  padding-left: 32px;
+  padding-top: 55px;
+  position: relative;
+  
+  &:nth-child(2){
+    margin-top: 60px;
+  }
+  &:nth-child(3){
+    margin-top: 175px;
+  }
+  
+  @include global.mq('sp') {
+    width: 100%;
+    padding-left: 15px;
+
+    &:nth-child(n + 2){
+      margin-top: 19px;
+    }
+  }
+
+}
+
+.service__card-number{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 102px;
+  height: 125px;
+  z-index: 2;
+}
+
+.service__card-img{
+position: relative;
+}
+
+.service__card-title{
+position: absolute;
+bottom: 34px;
+left: -32px;
+
+font-size: 28px;
+font-weight: 700;
+}
+
+.service__card-title-item{
+  display: inline;
+  
+  &:nth-child(2){
+    display: inline-block;
+    margin-top: 9px;
+  }
+}
+
+.service__card-sentence{
+margin-top: 16px;
+}
