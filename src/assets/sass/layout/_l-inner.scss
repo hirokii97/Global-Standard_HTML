@@ -1,10 +1,10 @@
 @use "../global" as global;
 
 .l-inner{
-  max-width: 1280px;
+  max-width: 1140px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 90px;
+  padding: 0 20px;
   
   @include global.mq('sp') {
     padding: 0 20px;

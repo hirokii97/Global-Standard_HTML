@@ -49,7 +49,7 @@ function watch() {
   //html
   gulp.watch("./assets/**/*.html", gulp.series(formatHTML,copyImage,browserReload));
   //js
-  gulp.watch("./src/assets/js/*.js", gulp.series(minJS, browserReload));
+  gulp.watch("./src/assets/**/*.js", gulp.series(minJS, browserReload));
 }
 
 //ブラウザ表示
@@ -108,7 +108,7 @@ function compilePug(){
   }))
   .pipe(gulp.dest('./public'))
 
-}
+};
 
 //ターミナルでのコマンド指定（例：npx gulp compileSass）
 exports.test = test;
