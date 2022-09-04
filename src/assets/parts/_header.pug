@@ -33,3 +33,9 @@ header.header
       a.contact__btn.c-blue-btn.btn お問い合わせ
     .header-menu-hamburger
       .header-hamburger-item
+  .header-drawer-nav
+    .header-drawer-wrapper
+      each menu in menus
+        a.header__list.list(href=`${menu.url}`) #{menu.name}
+      a.download__btn.c-white-btn.btn 資料ダウンロード
+      a.contact__btn.c-blue-btn.btn お問い合わせ

@@ -2,12 +2,21 @@
 
 header{
   background: #FFF;
+  height: 100px;
+  @include global.mq('sp') {
+    height: 60px;
+  }
 }
 
 .header__inner{
+  background: #FFF;
   padding: 16px;
+  height: 100px;
+  position: fixed;
+  z-index: 100;
   
   @include global.mq("sp") {
+    height: 60px;
     padding: 11px 20px;
     display: flex;
     align-items: center;
@@ -28,15 +37,20 @@ header{
 .header__title{
   flex: 1;
   font-size: 40px;
+  min-width: 282px;
   color: global.$main-color;
-
+  
   @include global.mq(sp) {
     font-size: 28px;
+    min-width: 198px;
   }
 }
 
 .header__nav{
   display: flex;
+  width: 478px;
+  margin-left: 10px;
+  justify-content: space-between;
 
   @include global.mq("tab") {
     display: none;
@@ -49,7 +63,7 @@ header{
   font-size: 14px;
 
   :nth-child(n + 2){
-    margin-left: 46px;
+    // margin-left: 46px;
 
     &::before{
       position: absolute;
@@ -125,5 +139,70 @@ header{
       height: 2px;
       background-color: global.$main-color;
       top:-6.75px;
+    }
+  }
+
+  //drawer
+  .header-drawer-nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    margin-top: 100px;
+    z-index: 100;
+    background-color: global.$main-color;
+
+    @include global.mq('sp') {
+      margin-top: 60px;
+    
+    }
+  }
+
+  .header-drawer-wrapper{
+    text-align: center;
+    display: flex;
+    padding: 60px 40px;
+    flex-direction: column;
+
+    //メニュー
+    & .header__list{
+      color: global.$text-color-type2 ;
+      font-weight: 300;
+
+      &:hover{
+        opacity: 0.8;
+      }
+    }
+    //資料ダウンロード
+    & .download__btn{
+      color: global.$text-color-type2 ;
+      background-color: transparent;
+      border: global.$text-color-type2 1px solid;
+      padding-top: 22px;
+      padding-bottom: 22px;
+      
+      &:hover{
+        background-color: global.$main-bold-color;
+      }
+    }
+
+    //お問い合わせ
+    & .contact__btn{
+      color: global.$main-color ;
+      background-color: global.$text-color-type2;
+      border: global.$text-color-type2 1px solid;
+      padding-top: 22px;
+      padding-bottom: 22px;
+      margin-left: 0px;
+
+      &:hover{
+        color: global.$text-color-type2 ;
+        background-color: global.$main-color;
+      }
+    }
+
+    a{
+      &:nth-child(n + 2){
+        margin-top: 40px;
+      }
     }
   }
