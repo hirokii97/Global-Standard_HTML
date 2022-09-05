@@ -68,7 +68,6 @@ header{
     &::before{
       position: absolute;
       content: "／";
-      top: 0px;
       transform:translate(-24px, -1px);
 
     }
@@ -100,63 +99,88 @@ header{
 
 //ハンバーガーメニュー
 .header-menu-hamburger{
-  position: relative;
-
+  width: 27px;
+  height: 16px;
+  
   @include global.mq("pc") {
     display: none;
   }
-  }
-  
+}
+
 .header-hamburger-item{
-    //真ん中
-    position: absolute;
-    display: inline-block;
-    content: "";
-    width: 28.75px;
-    height: 2px;
+  width: 27px;
+  height: 16px;
+  position: relative;
+
+  & span{
     background-color: global.$main-color;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0px;
+    display: inline-block;
+    position: absolute;
+    height: 2px;
+    width: 27px;
+    transition: all .4s;
+    }
+
+    
+    //上
+    & span:nth-of-type(1){
+      top:0px;
+    }
+
+    //真ん中
+    & span:nth-of-type(2){
+      top:8px;
+    }
 
     //下
-    &::after{
-      position: absolute;
-      display: inline-block;
-      content: "";
-      width: 28.75px;
-      height: 2px;
-      background-color: global.$main-color;
-      top:6.75px;
-    }
-
-    //上
-    &::before{
-      position: absolute;
-      display: inline-block;
-      content: "";
-      width: 28.75px;
-      height: 2px;
-      background-color: global.$main-color;
-      top:-6.75px;
+    & span:nth-of-type(3){
+      top: 16px;
     }
   }
+
+.header-hamburger-item{
+  &.active{
+    & span:nth-of-type(1){
+      transform: translateY(8px) rotate(-45deg);
+  }
+    & span:nth-of-type(2){
+      opacity: 0;
+  }
+    & span:nth-of-type(3){
+      transform: translateY(-8px) rotate(45deg);
+  }
+  } 
+}
+
 
   //drawer
   .header-drawer-nav{
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    margin-top: 100px;
-    z-index: 100;
-    background-color: global.$main-color;
+    @include global.mq('tab') {
+      width: 100%;
+      height: 100%;
 
-    @include global.mq('sp') {
-      margin-top: 60px;
-    
+      position: fixed;
+      z-index: 100;//前面に出す
+      top: 100px;//header分
+      right: -120%;//右側に隠す
+      background-color: global.$main-color;
+      transition: all 0.6s;
+      &.active{
+        right: 0;//アクティブクラスが付いたら現れる
+      }
     }
+    
+    @include global.mq('sp') {
+      top: 60px;
+      &.active{
+        right: 0;//アクティブクラスが付いたら現れる
+      }
+    }
+
   }
 
+
+  //ドロワー画面
   .header-drawer-wrapper{
     text-align: center;
     display: flex;
@@ -192,7 +216,6 @@ header{
       border: global.$text-color-type2 1px solid;
       padding-top: 22px;
       padding-bottom: 22px;
-      margin-left: 0px;
 
       &:hover{
         color: global.$text-color-type2 ;
