@@ -176,13 +176,13 @@ block content
         .case-study__contents
           .case-study__cards
               each caseStudy in caseStudies
-                .case-study__card
+                a.case-study__card
                   .case-study__card-img
                     img(src=`${caseStudy.img}` alt="")
                   .case-study__card-name #{caseStudy.name} 様
                   .case-study__card-tag #{caseStudy.tag}
-                  a.case-study__card-more
-                    img(src=`${path}/assets/img/arrow-icon-1.png` alt="")
+                  .case-study__card-more
+                    //- img(src=`${path}/assets/img/arrow-icon-1.png` alt="")
           .l-view-more-box.case-study__view-more
             .l-view-more-sp.c-view-more
               a.c-view-more-link

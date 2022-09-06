@@ -74,8 +74,17 @@ footer{
     background-color: global.$accent-color-type1;
 
     &::after{
-      background: url(../img/icon-arrow-right02.png) no-repeat center center / contain;
       right: 8%;
+      background: url(../img/icon-arrow-right01.png) no-repeat center center / cover;
+      mask-image: url(../img/icon-arrow-right01.png) ;
+      mask-size: contain;
+      background-blend-mode: multiply;
+      background-color:global.$text-color-type1;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 12.7px;
+      width: 19px;
+      transition: all 0.4s;
     }
   }
 
@@ -86,9 +95,9 @@ footer{
     top: 50%;
     transform: translateY(-50%);
     right: 10%;
-    background: url(../img/icon-arrow-right01.png) no-repeat center center / contain;
+    background: url(../img/icon-arrow-right01.png) no-repeat center center / cover;
     width: 20px;
-    height: 20px;
+    height: 13px;
 
   }
 }

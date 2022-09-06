@@ -76,4 +76,7 @@ position: relative;
 //リンクをhoverした時、矢印伸びる
 .c-view-more-link:hover .c-view-more-arrow-type2{
   width: 100%;
+  @include global.mq('sp') {
+    width: 65px;//スマホ版ではアニメーション不要（widthそのまま）
+  }
 } 

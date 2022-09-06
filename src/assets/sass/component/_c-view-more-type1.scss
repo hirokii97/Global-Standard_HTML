@@ -55,12 +55,12 @@ position: relative;
   margin-bottom: 4px;
   width: 95px;
   height: 7px;
-
+  
   border-bottom: 2px global.$text-color-type2 solid;
   border-right: 2px global.$text-color-type2 solid;
   transform: skew(45deg);
   transition: all 0.5s 0s ease; 
-
+  
   @include global.mq('sp') {
     width: 65px;
     height: 10px;
@@ -71,6 +71,9 @@ position: relative;
 //リンクをhoverした時、矢印伸びる
 .c-view-more-link:hover .c-view-more-arrow-type1{
   width: 100%;
+  @include global.mq('sp') {
+    width: 65px;//スマホ版ではアニメーション不要（widthそのまま）
+  }
 } 
 
 .case-study__view-more{

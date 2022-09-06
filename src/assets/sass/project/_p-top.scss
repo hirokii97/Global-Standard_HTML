@@ -347,7 +347,6 @@ news
 
 .news-background{
   position: relative;
-  z-index: -1;
   
   &::after{
     content: "";
@@ -411,6 +410,7 @@ case-study
 .case-study__card{
   width: 320px;
   position: relative;
+  display: inline-block;
   
   @include global.mq('sp') {
     width: 335px;
@@ -453,5 +453,15 @@ margin-top: 16px;
   position: absolute;
   bottom: 0;
   right: 7px;
+  
+  //白矢印マーク
+  background: url(../img/arrow-icon-1.png) no-repeat center center / cover;
+  
+}
 
+//カードをhoverしたら黄色矢印になり右へ少し動く
+.case-study__card:hover .case-study__card-more{
+  background: url(../img/arrow-icon-active.png) no-repeat center center / cover;
+  right: 5px;
+  transition: all 0.1s;
 }
