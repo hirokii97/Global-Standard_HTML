@@ -1,0 +1,128 @@
+extend  ../template/_page.pug
+append value
+ - const title = "About-us Global Standard -just another WordPress site"
+ - const description = ""
+ - const path = "."
+ - const cssPath = ".."
+
+ -
+  const company_content = [
+    {
+      name:"代表",
+      about:"波瑠　慶太"
+    },
+    {
+      name:"事業内容",
+      about:"・ビジネス英会話教育事業 <br>・異文化交流サポート事業 <br>・ビジネス留学事業"
+    },
+    {
+      name:"設立",
+      about:"2012年10月03日"
+    },
+    {
+      name:"所在地",
+      about:"〒550-1000 <br> 大阪市西区土佐堀9-5-5"
+    },
+    {
+      name:"TEL",
+      about:"06-123-4567（代表）"
+    },
+    {
+      name:"FAX",
+      about:"06-123-4568（代表）"
+    },
+    {
+      name:"E-mail",
+      about:"globalstandard@example.com"
+    },
+  ];
+
+ -
+  const member_content = [
+    {
+      position:"代表取締役社長",
+      name:"波瑠　慶太",
+      sentence:"20年間外資系企業に勤務し、世界17カ国でビジネスを展開。 様々な文化に触れ、コミュニケーションスキルを磨き、同時にその必要性を実感する。 自身も講師を務め、実体験から得られた知見を皆様に還元し、グローバルなビジネス展開をサポートいたします。",
+      image:`../assets/img/img-directors01.png`,
+    },
+    {
+      position:"取締役",
+      name:"ジャック・スミス",
+      sentence:"オーストラリア出身。 英会話の講師として13年のキャリアがあります。 翻訳業務も担当しており、外国映画の日本版DVDの字幕やテレビ番組の英語をヒヤリングなども行なっております。 皆様に「より気持ちの伝わる英会話」を習得していただくサポートをいたします。",
+      image:`../assets/img/img-directors02.png`,
+    },
+    {
+      position:"取締役",
+      name:"メアリー・ジャクソン",
+      sentence:"アメリカ出身。 メジャーリーグ球団「ニューヨークヤンキース」の通訳担当として7年間チームに在籍。 数多くの契約交渉の経験を活かし、国際ビジネスにおけるコミュニケーションのマナーから応用までお伝えいたします。",
+      image:`../assets/img/img-directors03.png`,
+    },
+  ];
+
+
+block mainVisual
+  .header__top
+    .header__top__wrapper
+      .header__top__title
+      .header__top__subtitle
+  //パンくずリスト
+  .header-breadcrumbs
+    .header-breadcrumbs-home ホーム
+    .header-breadcrumbs-arrow ＞
+    .header-breadcrumbs-firstTitle 当社について
+
+
+block content
+  .about__page
+
+    .about__main
+
+    .about__main__card
+    .about__main__head 
+      .about__main__text 
+        .about__main__title MISSION
+        .about__main__subtitle 社会的使命
+      .about__main__contents 
+        .about__main__concept 人財育成を通じて、豊かな世界を創造する
+        .about__main__sentence 急速に広がったグローバル社会に対応できる人材を育成することで、文化・言語の垣根を越えたコミュニケーションを活発にし、一人でも多くの人が豊かに暮らせる世界を実現することを使命とする。
+
+    .about__main__card
+    .about__main__head 
+      .about__main__text 
+        .about__main__title VISION
+        .about__main__subtitle 企業理念
+      .about__main__contents 
+        .about__main__concept 文化の垣根を越えた 人と人とのつながりが新しい価値を生む
+        .about__main__sentence コミュニケーションスキル習得をサポートすることで一人でも多くのビジネスパーソンの視野を広げ、世界を舞台に新しい相乗効果を生む未来を創造する。文化の垣根を越えた人と人とのつながりが新しい価値を生むことを信念とする。
+
+    .about__company
+      .about__company__form 
+        .about__company__title 会社概要
+        .about__company__contents
+          each contents in company_content
+            .about__company-card
+              .about__company-tag #{contents.name}
+              .about__company-about !{contents.about} 
+
+    .about__member
+      .about__member__form 
+        .about__member__title 役員紹介
+          each contents in member_content
+            .about__member__contents
+              .about__member-card
+                .about__name__card
+                  .about__name__card #{contents.position}
+                  .about__name__card #{contents.name}
+                .about__member-sentence #{contents.sentence}
+                .about__member-sns
+                  a.member-sns.twitter
+                    img(src="../assets/img/icon-twitter.png", alt="")
+                  a.member-sns.facebook
+                    img(src="../assets/img/icon-facebook.png", alt="")
+                  a.member-sns.instagram
+                    img(src="../assets/img/icon-instagram.png", alt="")
+              .about__member-image
+                img(src=`${contents.image}` alt="")
+
+
+
