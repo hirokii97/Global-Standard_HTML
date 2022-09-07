@@ -47,6 +47,10 @@ footer{
 .order-box-main-title{
   text-align: center;
   font-size: 60px;
+  
+  @include global.mq('sp') {
+    font-size: 48px;
+  }
 }
 
 
@@ -119,6 +123,7 @@ footer{
 
 //最下層
 .footer-menu{
+  position: relative;
   text-align: center;
   background-color:global.$text-color-type1;
   color: global.$text-color-type2;
@@ -160,4 +165,14 @@ footer{
     font-size: 12px;
     
   }
+}
+
+.to-top-btn{
+  width: 40px;
+  height: 40px;
+  background: url(../img/icon-top.png) center center / cover;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+
 }

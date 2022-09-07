@@ -353,7 +353,7 @@ news
     position: absolute;
     top: 624px;
     left:0;
-    z-index: -1;
+    z-index: -2;
     transform:skew(0deg, 10deg);
     background-color: #EDF3F8;
     width: 100%;
@@ -408,12 +408,13 @@ case-study
 }
 
 .case-study__card{
-  width: 320px;
+  max-width: 320px;
   position: relative;
   display: inline-block;
   
   @include global.mq('sp') {
-    width: 335px;
+    max-width: 335px;
+    width: 100%;
   }
 }
 
@@ -421,7 +422,8 @@ case-study
   width: 320px;
 
   @include global.mq('sp') {
-    width: 335px;
+    max-width: 335px;
+    width: 100%;
   }
 
   img{
@@ -431,6 +433,7 @@ case-study
 
 .case-study__card-name{
 margin-top: 16px;
+
 @include global.mq('sp') {
   margin-top: 12px;
 }
