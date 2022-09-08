@@ -155,10 +155,12 @@ header{
 
   //drawer
   .header-drawer-nav{
+    display: none;
     @include global.mq('tab') {
+      display: block;
       width: 100%;
       height: 100%;
-
+      
       position: fixed;
       z-index: 100;//前面に出す
       top: 100px;//header分
@@ -171,6 +173,7 @@ header{
     }
     
     @include global.mq('sp') {
+      display: block;
       top: 60px;
       &.active{
         right: 0;//アクティブクラスが付いたら現れる
