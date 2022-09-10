@@ -108,22 +108,22 @@ block content
     .about__member
       .about__member__form 
         .about__member__title 役員紹介
-          each contents in member_content
-            .about__member__contents
-              .about__member-card
-                .about__name__card
-                  .about__name__card #{contents.position}
-                  .about__name__card #{contents.name}
-                .about__member-sentence #{contents.sentence}
-                .about__member-sns
-                  a.member-sns.twitter
-                    img(src="../assets/img/icon-twitter.png", alt="")
-                  a.member-sns.facebook
-                    img(src="../assets/img/icon-facebook.png", alt="")
-                  a.member-sns.instagram
-                    img(src="../assets/img/icon-instagram.png", alt="")
-              .about__member-image
-                img(src=`${contents.image}` alt="")
+        each contents in member_content
+          .about__member__contents
+            .about__member-image
+              img(src=`${contents.image}` alt="")
+            .about__member-card
+              .about__name__card
+                .about__position #{contents.position}
+                .about__name #{contents.name}
+              .about__member-sentence #{contents.sentence}
+              .about__member-sns
+                a.member-sns.twitter
+                  img(src="../assets/img/icon-twitter.png", alt="")
+                a.member-sns.facebook
+                  img(src="../assets/img/icon-facebook.png", alt="")
+                a.member-sns.instagram
+                  img(src="../assets/img/icon-instagram.png", alt="")
 
 
 
