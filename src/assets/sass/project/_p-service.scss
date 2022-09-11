@@ -180,6 +180,8 @@ header-main
   }
 }
 
+
+//表
 .service__card-table-row{
   display: flex;
   padding-top: 33px;
@@ -199,6 +201,7 @@ min-width: 28px;
   margin-left: 48px;
 }
 
+//「お申し込みはこちら」
 .service__card-apply{
   max-width: 304px;
   width: 100%;
@@ -206,5 +209,171 @@ min-width: 28px;
   
   @include global.mq('sp') {
     max-width: 295px;
+  }
+}
+/* ========================
+導入の流れ
+======================== */
+
+.service__main__flow{
+  margin-top: 160px;
+  background: url(../img/bg-service-flow.png) no-repeat center center / cover;
+
+  
+  @include global.mq('sp') {
+    margin-top: 60px;
+  }
+}
+
+.service__flow-wrapper{
+  max-width: 1090px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 5px 120px 5px;
+  
+}
+
+.service__flow-title{
+  text-align: center;
+  color: global.$text-color-type2;
+
+}
+
+.service__flow-boxes{
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+
+  @include global.mq('sp') {
+    margin-top: 40px;
+  }
+}
+
+.service__flow-box{
+  max-width: 295px;
+  width: 100%;
+  
+  @include global.mq('sp') {
+    max-width: 275px;
+  }
+}
+
+
+.service__flow-stepBox {
+  display: flex;
+  align-items: baseline;
+  color: global.$accent-color-type1;
+  height: 48px;
+  
+  @include global.mq('sp') {
+    display: block;
+    height: 72px;
+  }
+}
+
+.stepBox-step{
+  line-height: 24px;
+}
+
+.step-number{
+  font-size: 40px;
+  margin-left: 8px;
+  line-height: 48px;
+  
+  @include global.mq('sp') {
+    margin-left: 0px;
+  }
+}
+
+
+.service__flow-contents{
+  max-width: 295px;
+  width: 100%;
+  height: 209px;
+  padding: 46px 5px;
+  position: relative;
+  
+  @include global.mq('sp') {
+    max-width: 275px;
+    height: 150px;
+    padding: 22px 5px;
+  }
+
+  &::after{
+    border-left: 20px solid transparent; /* １番目の三角形は背景色と同じ色を指定 */
+    border-top: 104.5px solid transparent;
+    border-bottom: 104.5px solid transparent;
+    content: "";
+    position: absolute;
+    left: 0px; /* ボックスの左に合わせて三角形を作る */
+    top: 0;
+    // left: 50%; /* 一旦中央へ寄せる */
+    // margin-left: 50px; /* 四角形の幅の半分右へ移動する */
+
+  }
+}
+
+//boxes背景
+.background-step1{
+  background-color: #EDF3F8;
+}
+
+.background-step2{
+  background-color: #DDE8F0;
+
+  &::after{
+    border-left-color: #EDF3F8;//1番目の色 
+  }
+}
+.background-step3{
+  background-color: #C7DBE9;
+
+  &::after{
+    border-left-color: #DDE8F0; 
+  }
+}
+.background-step4{
+  background-color: #B0D0E5;
+
+  &::after{
+    border-left-color: #C7DBE9; 
+  }
+}
+
+
+.service__flow-content{
+  max-width: 200px;
+  width: 100%;
+  height: 117px;
+  margin: 0 auto; 
+  
+  @include global.mq('sp') {
+    width: 100%;
+    max-width: 235px;
+  }
+}
+
+.service__flow-content-title{
+  font-size: 20px;
+  color: global.$main-color;
+  font-weight: 700;
+  
+  @include global.mq('sp') {
+    font-size: 18px;
+  }
+}
+
+
+.service__flow-content-sentence{
+  margin-top: 20px;
+  font-size: 14px;
+
+  span{
+    color: global.$accent-color-type2;
+  }
+  
+  @include global.mq('sp') {
+    margin-top: 9px;
+  
   }
 }
