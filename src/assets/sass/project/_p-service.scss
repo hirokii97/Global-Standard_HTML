@@ -37,25 +37,79 @@ header-main
 }
 
 .service__main__page{
-  margin-top: 80px;
+  max-width: 1280px;
+  width: 100%;
+  margin: 80px auto 0px auto;
   padding: 0px 50px;
-  @include global.mq('sp') {
   
-    margin-top: 60px;
+  @include global.mq('sp') {
+    margin: 60px auto 0px auto;
+    padding: 0px 0px;
   }
 }
 
 .service__main__section{
   max-width: 1180px;
   margin: 0 auto;
-
-  //ビジネス英語研修
+  
+  //ビジネス英語研修(背景画像)
   &:nth-child(1){
     background: url(../img/img-service-detail01.png) no-repeat right bottom / 560px 896px;
+    padding:57px 0px 77px 0px;
+    margin-left: 90px;
+    
+    @include global.mq('sp') {
+      background: url(../img/img-service-detail01.png) no-repeat right top / 188px 301px;
+      margin-left: 0px;
+      padding:153px 20px 0px 20px;
+    }
+  }
+
+  //異文化コミュニケーション(背景画像)
+  &:nth-child(2){
+    background: url(../img/img-service-detail02.png) no-repeat left bottom / 560px 896px;
+    margin-right: 90px;
+    padding:57px 0px 77px 0px;
+    margin: 200px auto 0px auto;
+    
+    @include global.mq('sp') {
+      margin-right: 0px;
+      padding:153px 20px 0px 20px;
+      background: url(../img/img-service-detail02.png) no-repeat left top / 188px 301px;
+      margin: 80px auto 0px auto;
+    }
+  }
+
+  //ビジネス留学プログラム(背景画像)
+  &:nth-child(3){
+    background: url(../img/img-service-detail03.png) no-repeat right bottom / 560px 896px;
     margin-left: 90px;
     padding:57px 0px 77px 0px;
+    margin: 200px auto 0px auto;
+    
+    @include global.mq('sp') {
+      background: url(../img/img-service-detail03.png) no-repeat  right top / 188px 301px;
+      margin-left: 0px;
+      padding:153px 20px 0px 20px;
+      margin: 80px auto 0px auto;
+    }
   }
 }
+
+//カード番号（左上）n番目の直下（＞）
+.service__main__section:nth-child(1) > .service__section__card::after{
+  background: url(../img/number01.png) no-repeat center center / cover;
+}
+
+.service__main__section:nth-child(2) > .service__section__card::after{
+  background: url(../img/number02.png) no-repeat center center / cover;
+  right:20px ;
+}
+
+.service__main__section:nth-child(3) > .service__section__card::after{
+  background: url(../img/number03.png) no-repeat center center / cover;
+}
+
 
 .service__section__card{
   box-shadow: 0px 3px 12px #00000029;
@@ -69,13 +123,13 @@ header-main
   @include global.mq('sp') {
     padding: 40px 20px;
   }
-
-    &:nth-child(1){
-    &::after{ 
-      background: url(../img/number01.png) no-repeat center center / cover;
-    }
-  }
 }
+
+//2つ目のカード（異文化コミュニケーション）は右寄せ
+.service__main__section:nth-child(2) > .service__section__card{
+  margin-left: auto;
+}
+
 
 .service__section__card::after{
   content: "";
@@ -135,6 +189,10 @@ header-main
   &:nth-child(1){
     border-top: #CCCCCC 1px solid;
   }
+}
+
+.service__card-table-tag{
+min-width: 28px;
 }
 
 .service__card-table-detail{
