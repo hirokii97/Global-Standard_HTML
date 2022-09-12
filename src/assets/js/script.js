@@ -21,8 +21,8 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-//drawer
 
+//drawer
 $(function() {
   //処理を書く部分
   $(".header-hamburger-item").click(function () {//ボタンがクリックされたら
@@ -37,6 +37,7 @@ $(function() {
   });
 
   
+
   //トップに戻る
 // .to-top-btnをクリックした際の設定
 $('.to-top-btn').click(function () {
@@ -45,4 +46,12 @@ $('.to-top-btn').click(function () {
   }, 500);//ページトップスクロールの速さ。数字が大きいほど遅くなる
   return false;//リンク自体の無効化
 });
+
+
+//アコーディオンをクリックした時の動作
+$(".service__question-card").on("click", function(){
+  $(this).find(".service__question-box-title").toggleClass("active")//質問分が赤くなる
+  $(this).find(".service__question-box-btn").toggleClass("active")//「+」から「×」に変化
+  $(this).find(".service__question-card-answer").slideToggle(500);//回答文が現れる
+})
 

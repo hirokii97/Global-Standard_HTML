@@ -464,6 +464,7 @@ min-width: 28px;
 }
 
 .service__question-card{
+  display: block;
   padding: 32px 12px 32px 0px;
   border-bottom: #DDDDDD 1px solid;
   
@@ -533,6 +534,7 @@ min-width: 28px;
 }
 
 .service__question-card-answer{
+  display: none;
   margin-left: 40px;
   margin-top: 32px;
   font-size: 14px;
