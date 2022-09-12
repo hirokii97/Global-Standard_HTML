@@ -229,7 +229,7 @@ min-width: 28px;
   max-width: 1090px;
   width: 100%;
   margin: 0 auto;
-  padding: 80px 5px 120px 5px;
+  padding: 80px 10px 120px 10px;
   
 }
 
@@ -247,6 +247,10 @@ min-width: 28px;
 
   @include global.mq('sp') {
     margin-top: 40px;
+    display: block;
+    max-width: 334px;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -255,7 +259,10 @@ min-width: 28px;
   width: 100%;
   
   @include global.mq('sp') {
-    max-width: 275px;
+    max-width: 334px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
   }
 }
 
@@ -269,6 +276,8 @@ min-width: 28px;
   @include global.mq('sp') {
     display: block;
     height: 72px;
+    flex: 1;
+    padding-right: 5px;
   }
 }
 
@@ -312,9 +321,18 @@ min-width: 28px;
     position: absolute;
     left: 0px; /* ボックスの左に合わせて三角形を作る */
     top: 0;
-    // left: 50%; /* 一旦中央へ寄せる */
-    // margin-left: 50px; /* 四角形の幅の半分右へ移動する */
 
+    // @include global.mq('sp') {
+    //   border-left: 36.7vw solid transparent; /* １番目の三角形は背景色と同じ色を指定 */
+    //   border-top: 20px solid transparent;
+    //   border-right: 36.7vw solid transparent;
+    //   content: "";
+    //   position: absolute;
+    //   left: 0px; /* ボックスの左に合わせて三角形を作る */
+    //   top: 0px;
+    //   width: 275px;
+    //   display: inline-block;
+    // }
   }
 }
 
@@ -328,6 +346,10 @@ min-width: 28px;
 
   &::after{
     border-left-color: #EDF3F8;//1番目の色 
+    
+    @include global.mq('sp') {
+      border-top-color: #EDF3F8;//1番目の色 
+    }
   }
 }
 .background-step3{
@@ -365,6 +387,7 @@ min-width: 28px;
   
   @include global.mq('sp') {
     font-size: 18px;
+    text-align: center;
   }
 }
 
@@ -393,3 +416,132 @@ min-width: 28px;
   
   }
 }
+
+//フロー矢印
+.service__flow-spArrow{
+  display: none;
+
+  @include global.mq('sp') {
+    display: block;
+    max-width: 275px;
+    width: 100%;
+    height: 30px;
+    border-left: 0.5em solid transparent; /* １番目の三角形は背景色と同じ色を指定 */
+    border-top: 20px solid transparent;
+    border-right: 36.7vw solid transparent;
+    border-top-color: #EDF3F8;//1番目の色
+    box-sizing: border-box;
+  }
+}
+
+/* ========================
+よくある質問
+======================== */
+
+.service__main__question{
+  margin-top: 160px;
+  
+  @include global.mq('sp') {
+    margin-top: 80px;
+  }
+}
+
+.service__question-title{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.service__question-wrapper{
+  max-width: 688px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 60px auto 160px auto;
+  
+  @include global.mq('sp') {
+    margin: 40px auto 100px auto;
+  }
+}
+
+.service__question-card{
+  padding: 32px 12px 32px 0px;
+  border-bottom: #DDDDDD 1px solid;
+  
+  @include global.mq('sp') {
+    padding: 16px 8px 16px 0px;
+  }
+}
+
+.service__question-box{
+  display: flex;
+  align-items: center;
+}
+
+.service__question-box-title{
+  flex: 1;
+  font-size: 20px;
+  font-weight: 700;
+
+  &.active{
+    color: global.$accent-color-type2;
+  }
+  
+  @include global.mq('sp') {
+    font-size: 16px;
+  }
+}
+
+.service__question-box-btn{
+  width: 21px;
+  height: 21px;
+  position: relative;
+  transition: all 0.5s;
+
+  &.active{
+    transform: rotate(45deg);
+
+    &::after{
+      background-color: global.$accent-color-type2;
+    }
+    &::before{
+      background-color: global.$accent-color-type2;
+    }
+  }
+
+  //縦棒
+  &::after{
+    content: "";
+    width: 2px;
+    height: 21px;
+    position: absolute;
+    left: 50%;
+    background-color: global.$text-color-type1;
+    transform: translateX(-50%);
+    
+  }
+  
+  //縦棒
+  &::before{
+    content: "";
+    width: 21px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    background-color: global.$text-color-type1;
+    transform: translateY(-50%);
+  }
+}
+
+.service__question-card-answer{
+  margin-left: 40px;
+  margin-top: 32px;
+  font-size: 14px;
+  
+  @include global.mq('sp') {
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+}
+
+
+
