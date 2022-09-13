@@ -1,2 +1,12 @@
 @use "../global" as global;
 
+/* ========================
+header-top修正
+======================== */
+.news-top{
+  background: url(../img/lower-mv-decoration_pc.png) no-repeat left/365px, url(../img/mv-news_pc.png) no-repeat center/cover;
+  
+  @include global.mq('sp') {
+    background: url(../img/lower-mv-decoration_sp.png) no-repeat left/165px, url(../img/mv-news_sp.png) no-repeat center/cover;
+}
+}
