@@ -1,0 +1,39 @@
+@use "../global" as global;
+
+.c-apply-btn{
+  text-align: center;
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: #fff;
+  border: global.$main-color 1px solid;
+  color: global.$main-color ;
+  width: 100%;
+  position: relative;
+
+  
+  &:hover{
+    background-color: global.$main-color;
+    color: global.$text-color-type2;
+    &::after{
+      right: 15px;
+      background: url(../img/icon-arrow-white.png) no-repeat center center / cover;
+
+    }  
+  }
+  
+  &::after{
+    transition: all 0.5s;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+
+    width: 20px;
+    height: 13.5px;
+
+    background: url(../img/icon-arrow-right04-2.png) no-repeat center center / cover;
+  }
+}

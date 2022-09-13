@@ -1,0 +1,327 @@
+@use "../global" as global;
+
+/* ========================
+MISSION VISION
+======================== */
+.about-top{
+  background: url(../img/lower-mv-decoration_pc.png) no-repeat left/365px, url(../img/mv-company_pc.png) no-repeat center/cover;
+  
+  @include global.mq('sp') {
+    background: url(../img/lower-mv-decoration_sp.png) no-repeat left/165px, url(../img/mv-company_sp.png) no-repeat center/cover;
+}
+}
+
+
+.p-header__top__subtitle{
+  margin-top: 8px;
+  width: 125px;
+  font-size: 20px;
+
+@include global.mq('sp') {
+  width: 100px;
+  font-size: 16px;
+}
+}
+
+.about__main{
+  margin-top: 80px;
+}
+
+.about__main__card{
+  max-width: 1100px;
+  width: 100%;
+
+  &:nth-child(2){
+    margin-top: 254px;
+  }
+}
+
+.about__main__head{
+  height: 353px;
+  @include global.mq('sp') {
+    height: 281px;
+  }
+}
+
+.head-mission{
+  background: url(../img/img-company01_pc.png) no-repeat center center / cover;
+}
+
+.head-vision{
+  background: url(../img/img-company02_pc.png) no-repeat center center / cover;
+}
+
+.about__main__text{
+  // padding-left: 20px;
+  padding-top: 20px;
+}
+
+.about__main__title{
+  font-size: 100px;
+  line-height: 121px;
+  color: global.$text-color-type2;
+  
+  @include global.mq('sp') {
+    font-size: 52px;
+    line-height: 63px;
+  }
+}
+
+.about__main__subtitle{
+  color: global.$text-color-type2;
+  font-size: 24px;
+  
+  @include global.mq('sp') {
+    font-size: 16px;
+  }
+  
+}
+
+.about__main__contents{
+  max-width: 688px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 32px 5px;
+  box-shadow: 0px 3px 12px #00000029;
+  
+  position: relative;
+  top: 120px;
+  
+  @include global.mq('sp') {
+    padding: 20px;
+  }
+}
+
+.about__main__concept{
+  text-align: center;
+  color: global.$main-color;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.about__main__sentence{
+  font-size: 14px;
+  margin-top: 33px;
+  max-width: 608px;
+  width: 100%;
+  margin: 0 auto;
+  @include global.mq('sp') {
+    margin-top: 20px;
+    
+  }
+}
+
+/* ========================
+会社概要
+======================== */
+
+.about__company{
+  padding: 80px 20px;
+  margin-top: 296px;
+  background: url(../img/bg-case.png) no-repeat center center / cover;
+  
+  @include global.mq('sp') {
+    margin-top: 278px;
+    padding: 60px 20px;
+  }
+}
+
+.about__company__form{
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 60px 20px;
+  
+  @include global.mq('sp') {
+    padding: 40px 20px;
+  }
+}
+
+.about__company__title{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.about__company__contents{
+  max-width: 688px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 60px;
+
+  background-image: linear-gradient(
+    90deg, 
+    global.$main-color 0px 174px,
+    #E8EAEC 174px
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  background-position: top;
+  
+  @include global.mq('sp') {
+    margin-top: 40px;
+    background-image: linear-gradient(
+      90deg, 
+      global.$main-color 0px 104px,
+      #E8EAEC 104px
+    );
+  }
+}
+
+.about__company-card{
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  //下線部
+  background-image: linear-gradient(
+    90deg, 
+    global.$main-color 0px 174px,
+    #E8EAEC 174px
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  background-position: bottom;
+  
+  @include global.mq('sp') {
+    padding-top: 17px;
+    padding-bottom: 17px;  
+    background-image: linear-gradient(
+      90deg, 
+      global.$main-color 0px 104px,
+      #E8EAEC 104px
+    );
+  }
+
+}
+
+.about__company-cardContents{
+  display: flex;
+  align-items: center;
+  max-width: 656px;
+  width: 100%;
+  margin: 0 auto;
+
+  @include global.mq('sp') {
+    font-size: 14px;
+  }
+}
+
+.about__company-tag{
+  width: 144px;
+  flex-shrink: 1;
+  
+  @include global.mq('sp') {
+    width: 104px;
+  }
+}
+
+.about__company-about{
+  margin-left: 60px;
+  word-break: break-all;
+  
+  @include global.mq('sp') {
+    margin-left: 20px;
+  
+  }
+}
+
+/* ========================
+役員紹介
+======================== */
+
+.about__member{
+  padding: 120px 20px 184px 20px ;
+  position: relative;
+  
+  @include global.mq('sp') {
+    padding: 60px 20px 156px 20px ;
+
+    &::after{
+      background-color: #EDF3F8;
+      bottom: -34px;
+      height: 1330px;
+    }
+  }
+
+  &::after{
+    background-color: #EDF3F8;
+    content: "";
+    height: 600px;
+    left: 0;
+    position: absolute;
+    bottom: 5px;
+    transform: skew(0deg, 10deg);
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+.about__member__title{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.about__member__contents{
+  display: flex;
+  max-width: 688px;
+  margin: 60px auto 0px auto;
+  flex-direction: row-reverse;
+  
+  @include global.mq('sp') {  
+    display: block;
+    max-width: 335px;
+    margin: 60px auto 0px auto;
+  }
+
+}
+
+.about__member-card{
+  max-width: 408px;
+}
+
+.about__name__card{
+  display: flex;
+  align-items: baseline;
+  font-weight: 700;
+
+  @include global.mq('sp') {
+    margin-top: 20px;
+  }
+}
+
+.about__position{
+  font-size: 14px;
+}
+
+.about__name{
+  margin-left: 20px;
+  font-size: 24px;
+}
+
+.about__member-sentence{
+  margin-top: 32px;
+}
+
+
+//SNS
+.about__member-sns{
+  margin-top: 32px;
+  display: flex;
+  gap: 24px;
+  img{
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
+  }
+}
+
+.about__member-image{
+  margin-left: 40px;
+  img{
+    width: 240px;
+    height: 320px;
+  }
+}

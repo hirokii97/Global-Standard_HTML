@@ -1,0 +1,14 @@
+@use "../global" as global;
+
+.br-sp{
+  display: none;
+  @include global.mq('sp') {
+    display: block;
+  }
+}
+
+.br-pc{
+  @include global.mq('sp') {
+    display: none;
+  }
+}

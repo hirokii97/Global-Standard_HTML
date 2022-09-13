@@ -1,0 +1,49 @@
+@use "../global" as global;
+
+.p-header__top{
+  width: 100%;
+  height: 250px;
+}
+
+.p-header__top__wrapper{
+  max-width: 874px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 70px 20px;
+  
+  @include global.mq('sp') {
+    padding: 90px 20px;
+  }
+}
+
+.p-header__top__title{
+  display: inline-block;
+  line-height: 72px;
+  font-size: 60px;
+  @include global.mq('sp') {
+    line-height: 38px;
+    font-size: 32px;
+  }
+}
+
+ //パンくずリスト
+.header-breadcrumbs{
+  display: flex;
+  margin-top: 13px;
+
+  @include global.mq('sp') {
+    font-size: 12px;
+  }
+}
+
+.header-breadcrumbs-home{
+  color: #888888;
+}
+
+.header-breadcrumbs-arrow{
+  margin-left: 8px;
+}
+
+.header-breadcrumbs-firstTitle{
+  margin-left: 8px;
+}

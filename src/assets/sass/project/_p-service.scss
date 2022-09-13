@@ -297,11 +297,13 @@ min-width: 28px;
 }
 
 .service__flow-contents-wrapper{
+  display: flex;
   max-width: 295px;
   width: 100%;
   height: 209px;
 
   @include global.mq('sp') {
+    display: block;
     max-width: 275px;
     height: 150px;
     position: relative;
@@ -318,15 +320,23 @@ min-width: 28px;
   
   @include global.mq('tab') {
     padding: 46px 25px 46px 30px;
+    padding: 46px 5px 46px 30px;//kari
   }
   
   @include global.mq('sp') {
     max-width: 275px;
-    height: 150px;
-    padding: 22px 5px;
+    height: 161px;
+    padding: 14px 20px 18px 20px;
+  }
+  
+    &.contents-step1{
+    @include global.mq('sp') {
+      padding: 22px 20px  18px 20px;
+    }
   }
 
   &::after{
+    display:none;//BU
     border-left: 20px solid transparent; /* １番目の三角形は背景色と同じ色を指定 */
     border-top: 104.5px solid transparent;
     border-bottom: 104.5px solid transparent;
@@ -334,18 +344,6 @@ min-width: 28px;
     position: absolute;
     left: 0px; /* ボックスの左に合わせて三角形を作る */
     top: 0;
-
-    // @include global.mq('sp') {
-    //   border-left: 36.7vw solid transparent; /* １番目の三角形は背景色と同じ色を指定 */
-    //   border-top: 20px solid transparent;
-    //   border-right: 36.7vw solid transparent;
-    //   content: "";
-    //   position: absolute;
-    //   left: 0px; /* ボックスの左に合わせて三角形を作る */
-    //   top: 0px;
-    //   width: 275px;
-    //   display: inline-block;
-    // }
   }
 }
 
@@ -388,6 +386,8 @@ min-width: 28px;
   margin: 0 auto; 
   
   @include global.mq('sp') {
+    
+    height: 103px;
     width: 100%;
     max-width: 235px;
   }
@@ -430,13 +430,13 @@ min-width: 28px;
   }
 }
 
-//フロー矢印
+//フロー矢印BOX
 .service__flow-spArrow{
-  display: none;
+  width: 30px;
+  height: 209px;
 
   @include global.mq('sp') {
     
-    display: block;
     display: flex;
     position: absolute;
     bottom:0px;
@@ -446,14 +446,66 @@ min-width: 28px;
   }
 }
 
-.service__flow-spArrow-left{
+//フロー矢印１
+.service__flow-spArrow-first{
+  height: 50%;
   width: 100%;
-  background: linear-gradient(to bottom left, #EDF3F8 50% , #DDE8F0 50%) ;
+
+  @include global.mq('sp') {
+    height: 100%;
+  }
+  
+  &.step1{
+    background: linear-gradient(to bottom left, #DDE8F0 50% , #EDF3F8  50%) ;
+    
+    @include global.mq('sp') {
+      background: linear-gradient(to bottom left, #EDF3F8 50% , #DDE8F0 50%) ;
+    }
+  }
+  &.step2{
+    background: linear-gradient(to bottom left, #C7DBE9 50% , #DDE8F0 50%) ;
+    
+    @include global.mq('sp') {
+      background: linear-gradient(to bottom left, #DDE8F0 50% , #C7DBE9 50%) ;
+    }
+    
+  }
+  &.step3{
+    background: linear-gradient(to bottom left, #B0D0E5 50% , #C7DBE9 50%) ;
+    
+    @include global.mq('sp') {
+      background: linear-gradient(to bottom left, #C7DBE9 50% , #B0D0E5 50%) ;
+    }
+
+  }
+  &.step4{
+    background: #B0D0E5;
+  }
   
 }
-.service__flow-spArrow-right{
+
+//フロー矢印2
+.service__flow-spArrow-second{
+  height: 50%;
   width: 100%;
-  background: linear-gradient(to bottom right, #EDF3F8 50% , #DDE8F0 50%) ;
+
+  @include global.mq('sp') {
+    height: 100%;
+  }
+
+  &.step1{
+    background: linear-gradient(to bottom right, #EDF3F8 50% , #DDE8F0 50%) ;
+  }
+  &.step2{
+    background: linear-gradient(to bottom right, #DDE8F0 50% , #C7DBE9  50%) ;
+  }
+  &.step3{
+    background: linear-gradient(to bottom right, #C7DBE9 50% , #B0D0E5  50%) ;
+  }
+  &.step4{
+    background: #B0D0E5;
+  }
+  
 
 }
 
