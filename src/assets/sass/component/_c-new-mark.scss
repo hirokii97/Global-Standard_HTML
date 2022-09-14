@@ -1,0 +1,15 @@
+@use "../global" as global;
+
+.c-new-mark{
+  color: global.$accent-color-type2;
+}
+
+.c-front-new-mark{
+  @include global.mq('sp') {
+    font-size: 14px;
+  }
+}
+
+.c-sidebar-new-mark{
+    font-size: 14px;
+}

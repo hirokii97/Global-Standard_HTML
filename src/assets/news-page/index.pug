@@ -1,0 +1,169 @@
+extend  ../template/_page.pug
+append value
+ - const title = "NEWS - Global Standard -just another WordPress site"
+ - const description = ""
+ - const path = ".."
+ - const cssPath = ".."
+
+ -
+  const news__main_content = [
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"NEW",
+      date:"2021.01.01",
+      title:"お盆期間中の営業について",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"NEW",
+      date:"2021.01.01",
+      title:"新型コロナウイルス対策ご協力のお願い",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"オンライン英会話スクール「グッドイングリッシュオンライン株式会社」との業務提携について",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"○月のオンライン講座追加日程と、短期集中強化プランの申込み受付開始のお知らせ",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"オンライン英会話スクール「グッドイングリッシュオンライン株式会社」との業務提携について",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"○月のオンライン講座追加日程と、短期集中強化プランの申込み受付開始のお知らせ",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"オンライン英会話スクール「グッドイングリッシュオンライン株式会社」との業務提携について",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"○月のオンライン講座追加日程と、短期集中強化プランの申込み受付開始のお知らせ",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"オンライン英会話スクール「グッドイングリッシュオンライン株式会社」との業務提携について",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"○月のオンライン講座追加日程と、短期集中強化プランの申込み受付開始のお知らせ",
+    },
+  ];
+
+ -
+  const newPost__main_content = [
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じ…",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じ…",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じ…",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じ…",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じ…",
+    },
+  ];
+
+
+block mainVisual
+  .p-header__top.news-top
+    .p-header__top__wrapper
+      .p-header__top__title.c-title-type2.c-english-title NEWS
+      .p-header__top__subtitle.c-title-type2.c-sub-title.p-header__service__subtitle ニュース
+  //パンくずリスト
+  .header-breadcrumbs.l-inner
+    .header-breadcrumbs-home ホーム
+    .header-breadcrumbs-arrow ＞
+    .header-breadcrumbs-firstTitle ニュース
+
+
+block content
+  .news__page
+    .news__page__front
+      .news__page__front-title カテゴリ
+      .news__page__wrapper
+        each contents in news__main_content
+          .news__page__content
+            .news__page__content__image 
+              img(src=`${contents.img}`)
+            .news__page__content__about
+              .news__page__content__bar
+                .news__content__bar__category.c-category-tag.c-front-category-tag #{contents.category}
+                .news__content__bar__new.c-new-mark #{contents.new}
+                .news__content__bar__date.c-front-new-mark.c-date-font #{contents.date}
+              .news__page__content__title #{contents.title}
+
+        .news__page__pageNation
+        
+
+
+
+
+
+    //サイドバー
+    .sidebar 新着記事
+      .newPost__page__wrapper
+        each contents in newPost__main_content
+          .newPost__page__content
+            .newPost__page__content__image 
+              img(src=`${contents.img}`)
+            .newPost__page__content__about
+              .newPost__page__content__bar
+                .newPost__content__bar__category.c-category-tag.c-sidebar-category-tag #{contents.category}
+                .newPost__content__bar__new.c-new-mark #{contents.new}
+                .newPost__content__bar__date.c-date-font #{contents.date}
+              .newPost__page__content__title #{contents.title}

@@ -1,0 +1,29 @@
+@use "../global" as global;
+
+
+.c-category-tag{
+  color: global.$accent-color-type2;
+  border: global.$accent-color-type2 1px solid;
+  text-align: center;
+}
+
+
+.c-front-category-tag{
+  padding: 8px 0px;
+  width: 104px;
+  font-size: 14px;
+  
+  @include global.mq('sp') {
+    
+    padding: 4px 0px;
+    width: 72px;
+    font-size: 12px;
+  }
+}
+
+
+.c-sidebar-category-tag{
+  padding: 4px 0px;
+  width: 72px;
+  font-size: 12px;
+}

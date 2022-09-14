@@ -10,3 +10,92 @@ header-top修正
     background: url(../img/lower-mv-decoration_sp.png) no-repeat left/165px, url(../img/mv-news_sp.png) no-repeat center/cover;
 }
 }
+
+.news__page{
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 5px;
+  
+  @include global.mq('sp') {
+    display: block;
+  
+  }
+}
+
+.news__page__front{
+  max-width: 760px;
+  width: 100%;
+  margin: 80px auto 0px auto;
+}
+
+.news__page__front-title{
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 46px;
+  
+  @include global.mq('sp') {
+    font-size: 20px;
+    line-height: 29px;
+  }
+}
+
+.news__page__wrapper{
+  margin-top: 25px;
+}
+
+.news__page__content{
+  max-width: 760px;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+
+  &:nth-child(n + 2){
+    margin-top: 40px;
+    
+    @include global.mq('sp') {
+      margin-top: 20px;
+    }
+  }
+}
+
+.news__page__content__image{
+  width: 250px;
+  height: 156px;
+  
+  img{
+    width: 250px;
+    height: 156px;
+
+  }
+}
+
+.news__page__content__about{
+  max-width: 490px;
+  width: 100%;
+}
+
+.news__page__content__bar{
+  display: flex;
+  align-items: center;
+}
+
+.news__content__bar__new{
+  flex: 1;
+  width: 36px;
+  margin-left: 12px;
+}
+
+.news__page__content__title{
+  margin-top: 16px;
+}
+
+/* ========================
+ページネーション
+======================== */
+
+.news__page__pageNation{
+  margin-top: 60px;
+}

@@ -1,0 +1,62 @@
+@use "../global" as global;
+
+.sidebar{
+  width: 300px;
+  margin-top: 80px;
+  
+  @include global.mq('sp') {
+    width: 100%;
+  }
+}
+
+.newPost__page__content{
+  display: flex;
+  margin-top: 16px;
+  
+  @include global.mq('sp') {
+    margin-top: 20px;
+  }
+}
+
+.newPost__page__content__image{
+  width: 100px;
+  height: 100px;
+  
+  @include global.mq('sp') {
+    width: 120px;
+    height: 90px;
+  }
+  
+  img{
+    width: 100px;
+    height: 100px;
+
+    @include global.mq('sp') {
+      width: 120px;
+      height: 90px;
+    }
+  }
+}
+
+.newPost__page__content__about{
+  width: 190px;
+  margin-left: 10px;
+
+  @include global.mq('sp') {
+    max-width: calc(100% - 132px);
+    width: 100%;
+  }
+}
+
+.newPost__page__content__bar{
+  display: flex;
+  justify-content: space-between;
+}
+
+.newPost__page__content__title{
+  font-size: 14px;
+}
+
+.newPost__content__bar__category{
+}
+
