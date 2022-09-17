@@ -38,7 +38,7 @@ font-weight: 700;
     height: 44px;
     width: 100%;
     padding: 10px 0px 10px 16px;
-    color: #CCCCCC;
+    // color: #CCCCCC;
     font-family: global.$ff-base;
     font-weight: 500;
     
@@ -117,7 +117,6 @@ font-weight: 700;
 .my-checkbox {
   display: block;
   position: relative;
-  // margin: 1em 0;
   padding-left: 28px;
   cursor: pointer;
   user-select: none; /* テキストの選択を防ぐ */
@@ -165,6 +164,13 @@ font-weight: 700;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
   opacity: 0; /* 透明にしておく */
+
+  @include global.mq('sp') {
+    left: 33%; /* チェックの位置 */
+    top: -28%; /* チェックの位置 */
+    width: 15px; /* チェックの大きさ */
+    height: 29px; /* チェックの大きさ */
+  }
 }
 
 /* チェックが入ったときの□ */

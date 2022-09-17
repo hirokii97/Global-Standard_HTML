@@ -98,3 +98,31 @@ header-top修正
 .download__form__content__tag__requiredTag{
   margin-left: 9px;
 }
+
+
+
+/* ========================
+送信後メッセージ
+======================== */
+
+.download__page__apply__form__afterSend{
+  display: none;
+
+}
+
+.download__page__apply__form__afterSend__title{
+  font-size: 32px;
+  padding-bottom: 40px;
+  font-weight: 700;
+}
+
+.download__page__apply__form__afterSend__sentenceArrow{
+  display: inline;
+  margin-top: 14px;
+}
+
+.download__page__apply__form__afterSend__sentenceLink{
+  color: global.$main-color;
+  border-bottom: global.$main-color 1px solid;
+  margin-left: 8px;
+}
