@@ -1,0 +1,181 @@
+extend  ../template/_page.pug
+append value
+ - const title = "NEWS - Global Standard -just another WordPress site"
+ - const description = ""
+ - const path = ".."
+ - const cssPath = ".."
+
+ -
+  const news__main_content = [
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"NEW",
+      date:"2021.01.01",
+      title:"お盆期間中の営業について",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"NEW",
+      date:"2021.01.01",
+      title:"新型コロナウイルス対策ご協力のお願い",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"オンライン英会話スクール「グッドイングリッシュオンライン株式会社」との業務提携について",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"○月のオンライン講座追加日程と、短期集中強化プランの申込み受付開始のお知らせ",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"オンライン英会話スクール「グッドイングリッシュオンライン株式会社」との業務提携について",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"○月のオンライン講座追加日程と、短期集中強化プランの申込み受付開始のお知らせ",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"オンライン英会話スクール「グッドイングリッシュオンライン株式会社」との業務提携について",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"○月のオンライン講座追加日程と、短期集中強化プランの申込み受付開始のお知らせ",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"オンライン英会話スクール「グッドイングリッシュオンライン株式会社」との業務提携について",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"○月のオンライン講座追加日程と、短期集中強化プランの申込み受付開始のお知らせ",
+    },
+  ];
+
+ -
+  const newPost__main_content = [
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じ…",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じ…",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じ…",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じ…",
+    },
+    {
+      img:"../assets/img/icatch-news.png",
+      category:"カテゴリ",
+      new:"",
+      date:"2021.01.01",
+      title:"常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じ…",
+    },
+  ];
+
+
+block mainVisual
+  .p-header__top.news-top
+    .p-header__top__wrapper
+      .p-header__top__title.c-title-type2.c-english-title NEWS
+      .p-header__top__subtitle.c-title-type2.c-sub-title.p-header__service__subtitle ニュース
+  //パンくずリスト
+  .header-breadcrumbs.l-inner
+    .header-breadcrumbs-home ホーム
+    .header-breadcrumbs-arrow ＞
+    .header-breadcrumbs-firstTitle ニュース
+    .header-breadcrumbs-arrow ＞
+    .header-breadcrumbs-firstTitle ニュース詳細
+
+
+block content
+  .news__post
+
+    .news__post__wrapper
+
+      .news__post__header
+        .news__post__header__item
+          .news__post__header__item__category.c-category-tag カテゴリ
+          .news__post__header__item__date.c-date-font 2021.01.01
+        .news__post__header__title 常にハイパフォーマンスを目指すグローバルビジネスの現場を肌で感じることで、自走・自立できる思考力・適応力を醸成する起爆剤研修。
+
+      .news__post__image
+        img(src="../assets/img/single.png")
+
+      .news__post__contents
+      
+        .news__post__content
+          .news__post__content__title.news__post__h2 H2見出しH2見出しH2見出し
+          .news__post__content__sentence.news__post__h2 ビジネスパーソンとの交流の中で、より具体的に現地で働く人々の仕事に対する熱意や誇り、それぞれが持つリーダーシップなどを学ぶことができ非常に良い経験となりました。今後の目標はプロジェクトマネジメントに特化したマネージャーになることです。ビジネスパーソンとの交流の中で、より具体的に現地で働く人々の仕事に対する熱意や誇り、それぞれが持つリーダーシップなどを学ぶことができ非常に良い経験となりました。今後の目標はプロジェクトマネジメントに特化したマネージャーになることです。
+
+        .news__post__content
+          .news__post__content__title.news__post__h3 H3見出しH3見出しH3見出し
+          .news__post__content__sentence.news__post__h3 ビジネスパーソンとの交流の中で、より具体的に現地で働く人々の仕事に対する熱意や誇り、それぞれが持つリーダーシップなどを学ぶことができ非常に良い経験となりました。今後の目標はプロジェクトマネジメントに特化したマネージャーになることです。ビジネスパーソンとの交流の中で、より具体的に現地で働く人々の仕事に対する熱意や誇り、それぞれが持つリーダーシップなどを学ぶことができ非常に良い経験となりました。今後の目標はプロジェクトマネジメントに特化したマネージャーになることです。
+        
+        .news__post__content
+          .news__post__content__title.news__post__h4 H4見出しH4見出しH4見出し
+          .news__post__content__sentence.news__post__h4 ビジネスパーソンとの交流の中で、より具体的に現地で働く人々の仕事に対する熱意や誇り、それぞれが持つリーダーシップなどを学ぶことができ非常に良い経験となりました。今後の目標はプロジェクトマネジメントに特化したマネージャーになることです。ビジネスパーソンとの交流の中で、より具体的に現地で働く人々の仕事に対する熱意や誇り、それぞれが持つリーダーシップなどを学ぶことができ非常に良い経験となりました。今後の目標はプロジェクトマネジメントに特化したマネージャーになることです。
+        
+        .news__post__content
+          .news__post__content__title
+          .news__post__content__sentence
+          .news__post__content__list
+            ul
+              li ・リスト
+              li ・リスト
+              li ・リスト
+          .news__post__content__quote
+            .news__post__content__quote__sentence 引用した文章が入ります。ビジネスパーソンとの交流の中で、より具体的に現地で働く人々の仕事に対する熱意や誇り、それぞれが持つリーダーシップなどを学ぶことができ非常に良い経験となりました。今後の目標はプロジェクトマネジメントに特化したマネージャーになることです。ビジネスパーソンとの交流の中で、より具体的に現地で働く人々の仕事に対する熱意や誇り、それぞれが持つリーダーシップなどを学ぶことができ非常に良い経験となりました。
+
+        .news__post__content__pageNation
+          a.news__post__content__pageNation-btn < 前の記事へ
+          a.news__post__content__pageNation-btn 次の記事へ >
+
+
+
+    include ../parts/_sidebar.pug
