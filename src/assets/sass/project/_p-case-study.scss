@@ -1,78 +1,277 @@
 @use "../global" as global;
 
-.case-study{
-  background: url(../img/bg-case.png) center center / cover no-repeat;
-  color: global.$text-color-type2;
-  padding-top: 100px;
-  padding-bottom: 120px;
+/* ========================
+header-top修正
+======================== */
+.caseStudy-top{
+  background: url(../img/lower-mv-decoration_pc.png) no-repeat left/365px, url(../img/mv-company_pc.png) no-repeat center/cover;
   
   @include global.mq('sp') {
-    margin-top:60px;
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
+    background: url(../img/lower-mv-decoration_sp.png) no-repeat left/165px, url(../img/mv-company_sp.png) no-repeat center/cover;
+}
 }
 
-.case-study__contents{
+/* ========================
+導入事例 タブ
+======================== */
 
+.caseStudy__page{
+  max-width: 1120px;
+  width: 100%;
+  padding: 0px 10px;
+  margin: 0 auto;
 }
 
-.case-study__cards{
+
+.caseStudy__page__tab{
+  margin-top: 80px;
   display: flex;
-  justify-content: space-around;
-  gap: 40px ;
-  flex-wrap: wrap;
-  margin-top: 81px;
+  gap: 16px ;
+  font-weight: 700;
   
   @include global.mq('sp') {
-    gap: 52px ;
+    margin-top: 60px;
+    flex-direction: column;
   }
 }
 
-.case-study__card{
-  width: 320px;
+.caseStudy__page__tab__item{
+  font-size: 14px;
+  padding: 12px 0px;
+  max-width: 208px;
+  background-color: #EEEEEE;
+  text-align: center;
+  width: 100%;
+  
+  @include global.mq('sp') {
+    max-width: 298px;
+    margin: 0 auto;
+  
+  }
+}
+
+/* ========================
+導入事例
+======================== */
+
+
+.caseStudy__page__content{
+  margin-top: 80px;
+  margin-bottom: 160px;
+  
+  @include global.mq('sp') {
+    margin-top: 60px;
+    margin-bottom: 100px;
+  }
+}
+
+.caseStudy__page__content__title{
+  display: flex;
+  align-items: center;
+  border-left: global.$main-color 8px solid ;
+  
+  @include global.mq('sp') {
+    display: block;
+  }
+}
+
+.caseStudy__page__content__mainTitle{
+  font-weight: 700;
+  font-size: 28px;
+  padding-left: 10px;
+  
+  @include global.mq('sp') {
+    font-size: 24px;
+  }
+}
+
+.caseStudy__page__content__subTitle{
+  color: global.$main-color;
+  padding-left: 20px;
+  
+  @include global.mq('sp') {
+    font-size: 14px;
+    padding-left: 12px;
+  }
+}
+
+
+
+.caseStudy__page__content__cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  @include global.mq('sp') {
+    justify-content: space-around;
+  }
+  
+
+}
+
+.caseStudy__page__content__card{
+  margin-top: 60px;
+  max-width: 510px;
+  width: 100%;
+  box-shadow: 0px 3px 12px #00000029;
+  border-radius: 12px 12px 12px 12px;
+  position: relative;
+
+  @include global.mq('sp') {
+    margin-top: 54px;
+    &:nth-child(1){
+      margin-top: 25px;
+    }
+  }
+}
+
+/* ========================
+導入事例　header
+======================== */
+
+.caseStudy__page__content__card__header{
+  color: global.$text-color-type2;
+  background-color:  global.$main-color;
+  height: 100px;
+  padding: 18px 0px 18px 40px;
+  border-radius: 12px 12px 0px 0px;
+  
+  @include global.mq('sp') {
+    padding: 18px 0px 18px 20px;
+    height: 80px;
+  }
+  }
+
+.caseStudy__page__content__card__header-category{
+  font-size: 14px;
+  
+  @include global.mq('sp') {
+    font-size: 12px;
+  
+  }
+}
+
+.caseStudy__page__content__card__header-company{
+  font-size: 24px;
+  
+  span{
+    font-size: 16px;
+  }
+  
+  @include global.mq('sp') {
+    font-size: 16px;
+    
+    span{
+      font-size: 14px;
+    }
+  }
+}
+
+//画像
+.caseStudy__page__content__card__header-image{
+  width: 160px;
+  height: 112px;
+  border-radius: 12px 12px 12px 12px;
+  box-shadow: 6px 12px 12px rgb(0 0 0 / 16%),rgb(0 0 0 / 16%) 6px -6px 12px;
+  
+  img{
+    width: 160px;
+    height: 112px;
+    border-radius: 12px 12px 12px 12px;
+  }
+  position: absolute;
+  top: -5px;
+  right: 20px;
+  
+  @include global.mq('sp') {
+    width: 90px;
+    height: 68px;
+
+    top: 6px;
+    right: 20px;
+    
+    img{
+      width: 90px;
+      height: 68px;
+    }
+    
+  }
+}
+
+/* ========================
+導入事例　detail （カードの中身）
+======================== */
+
+.caseStudy__page__content__card__detail{
+  max-width: 510px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+  @include global.mq('sp') {
+    padding: 20px;
+  }
+}
+
+.caseStudy__page__content__card__course{
+  font-weight: 700;
+  display: flex;
+
+  padding-bottom: 10px;
+  border-bottom: #DDDDDD 1px solid;
+}
+
+
+.caseStudy__page__content__card__course-item{
+  
+  &.courseName{
+    padding-left: 10px;
+  }
+}
+
+.caseStudy__page__content__card__item{
+  margin-top: 32px;
+}
+
+.caseStudy__page__content__card__item-title{
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.caseStudy__page__content__card__item-titleMark {
+  width: 20px;
+  height: 20px;
   position: relative;
   
-  @include global.mq('sp') {
-    width: 335px;
+  img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
   }
 }
 
-.case-study__card-img{
-  width: 320px;
+.caseStudy__page__content__card__item-titleName{
+  font-size: 18px;
+  line-height: 26px;
+  margin-left: 10px;
+}
+
+.caseStudy__page__content__card__item-sentence{
+  margin-top: 9px;
+}
+
+/* ========================
+詳細ボタン
+======================== */
+
+.caseStudy__page__btn{
+  width: 336px;
+  margin: 60px auto 0px auto;
 
   @include global.mq('sp') {
-    width: 335px;
-  }
-
-  img{
+    max-width: 295px;
     width: 100%;
   }
-}
-
-.case-study__card-name{
-margin-top: 16px;
-@include global.mq('sp') {
-  margin-top: 12px;
-}
-}
-
-.case-study__card-tag{
-  margin-top: 12px;
-  font-size: 14px;
-  border: global.$text-color-type2 1px solid;
-  padding: 6px 32px;
-  display: inline-block;
-  text-align: center;
-
-}
-
-.case-study__card-more{
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  bottom: 0;
-  right: 7px;
-
 }
