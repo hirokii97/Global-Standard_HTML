@@ -1,0 +1,100 @@
+@use "../global" as global;
+
+/* ========================
+header-top修正
+======================== */
+.download-top{
+  background: url(../img/lower-mv-decoration_pc.png) no-repeat left/365px, url(../img/mv-download_pc.png) no-repeat center/cover;
+  
+  @include global.mq('sp') {
+    background: url(../img/lower-mv-decoration_sp.png) no-repeat left/165px, url(../img/mv-download_sp.png) no-repeat center/cover;
+}
+}
+
+.download__page{
+  display: flex;
+  justify-content: space-between;
+  max-width: 1120px;
+  width: 100%;
+  margin: 80px auto 120px auto;
+  padding: 0px 10px;
+  
+  @include global.mq('sp') {
+    max-width: calc(100% - 10px);
+    display: block;
+    margin: 60px auto 100px auto;
+  }
+}
+
+/* ========================
+資料説明
+======================== */
+
+.download__page__detail{
+  max-width: 510px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.download__page__detail__title{
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.download__page__detail__image{
+  max-width: 275px;
+  width: 100%;
+  margin: 0 auto;
+  height: 389px;
+  
+  img{
+    width: 275px;
+    height: 389px;
+  }
+}
+
+.download__page__detail__sentence{
+  margin-top: 40px;
+}
+
+/* ========================
+資料ダウンロード
+======================== */
+
+.download__page__apply{
+  max-width: 550px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.download__page__apply__form{
+  padding: 40px;
+  background-color: #EDF3F8;
+  border-radius: 12px;
+  
+  @include global.mq('sp') {
+    padding: 40px 20px 40px 20px;
+    margin-top: 60px;
+  
+  }
+}
+
+.download__page__apply__form__title{
+  font-size: 32px;
+
+  @include global.mq('sp') {
+    font-size: 24px;
+  
+  }
+}
+
+.download__form__content{
+
+  &:nth-child(1){
+    margin-top: 40px;
+  }
+}
+
+.download__form__content__tag__requiredTag{
+  margin-left: 9px;
+}

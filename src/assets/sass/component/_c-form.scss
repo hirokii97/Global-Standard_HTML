@@ -1,0 +1,181 @@
+@use "../global" as global;
+
+.c-form__title{
+font-weight: 700;
+}
+
+.c-form__content{
+  margin-top: 32px;
+  font-weight: 700;
+  
+  @include global.mq('sp') {
+    margin-top: 20px;
+  }
+}
+
+.c-form__content__tag{
+  font-size: 18px;
+  display: inline-block;
+  line-height: 26px;
+  vertical-align: baseline;
+  
+  @include global.mq('sp') {
+    font-size: 14px;
+  }
+}
+
+.c-form__content__box{
+  height: 44px;
+  width: 100%;
+  margin-top: 13px;
+  
+  @include global.mq('sp') {
+    margin-top: 8px;
+    
+  }
+  
+  input{
+    height: 44px;
+    width: 100%;
+    padding: 10px 0px 10px 16px;
+    color: #CCCCCC;
+    font-family: global.$ff-base;
+    font-weight: 500;
+    
+  }
+}
+
+.c-form__content__requiredTag{
+  display: inline;
+  font-size: 12px;
+  height: 20px;
+  line-height: 17px;
+  padding: 3.5px 8px 3.5px 8px;
+  box-sizing: content-box;
+
+  background-color: global.$accent-color-type2;
+  color: global.$text-background-type1;
+
+}
+
+
+//個人情報保護方針に同意します。
+.c-form__check{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px auto 0px auto;
+  max-width: 290px;
+  width: 100%;
+}
+
+//checkbox
+.c-form__check__checkbox{
+  width: 32px;
+  height: 32px;
+  
+  input{
+    width: 32px;
+    height: 32px;
+  }
+  
+  @include global.mq('sp') {
+    
+    width: 28px;
+    height: 28px;
+    
+    input{
+      width: 28px;
+      height: 28px;
+    }
+  }
+}
+
+//個人情報保護方針
+.c-form__check__detail{
+  border-bottom: #000 1px solid;
+  line-height: 24px;
+  vertical-align: bottom;
+}
+
+
+
+.c-form__sendBtn{
+  margin: 40px auto 0px auto;
+  max-width: 336px;
+}
+
+.c-apply-sendBtn{
+  &.c-apply-btn::after{
+    height: 0;
+  }
+}
+
+/* ========================
+チェックボックス(アレンジ)
+======================== */
+.my-checkbox {
+  display: block;
+  position: relative;
+  // margin: 1em 0;
+  padding-left: 28px;
+  cursor: pointer;
+  user-select: none; /* テキストの選択を防ぐ */
+  width: 32px;
+  height: 32px;
+  
+  @include global.mq('sp') {
+    width: 28px;
+    height: 28px;
+  
+  }
+}
+
+/* inputは非表示にする */
+.my-checkbox input {
+  display: none;
+}
+
+/* □ */
+.checkmark {
+  position: absolute;
+  top: 0; /* 上からの位置 */
+  left: 0;
+  
+  height: 32px; /* 大きさ */
+  width: 32px; /* 大きさ */
+
+  @include global.mq('sp') {
+    height: 28px; /* 大きさ */
+    width: 28px; /* 大きさ */
+  }
+  border: solid 1px #3E3E3E; /* 線 */
+  // border-radius: 4px;
+  box-sizing: border-box;
+}
+/* ✓ */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  left: 30%; /* チェックの位置 */
+  top: -1%; /* チェックの位置 */
+  width: 13px; /* チェックの大きさ */
+  height: 24px; /* チェックの大きさ */
+  border: solid global.$main-color;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0; /* 透明にしておく */
+}
+
+/* チェックが入ったときの□ */
+.my-checkbox input:checked + .checkmark {
+  background: #FFF; /* チェック時の色 */
+  border-color: #2e80ff; /* チェック時の色 */
+}
+
+/* チェックが入ったときの✓ */
+.my-checkbox input:checked + .checkmark:after {
+  opacity: 1; /* 透明を解除 */
+}
+
+ 
