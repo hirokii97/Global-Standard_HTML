@@ -1,23 +1,18 @@
-//swiper
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'vertical',
-  loop: true,
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
+var swiper = new Swiper('.swiper-container', {
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
   },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
+  loop: true,
+  pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+  },
+  autoplay: {
+      delay: 5000,
+      disableOnInteraction: true
   },
 });
 
