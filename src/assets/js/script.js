@@ -56,9 +56,9 @@ $(".service__question-card").on("click", function(){
 })
 
 
-//お問い合わせ完了メッセージ
+//資料ダウンロード完了メッセージ
 $(document).ready(function () {
-
+  
   $('#form').submit(function (event) {
     var formData = $('#form').serialize();
     $.ajax({
@@ -70,6 +70,7 @@ $(document).ready(function () {
         0: function () {
           $(".download__page__apply__form__afterSend").slideDown();
           $(".c-form__wrapper").fadeOut();
+          $('html,body').animate({scrollTop:$('#form').position().top})
           //window.location.href = "thanks.html";
         },
         // 200: function () {
@@ -81,4 +82,49 @@ $(document).ready(function () {
   });
 
 });
+
+
+//お問い合わせ完了メッセージ
+$(document).ready(function () {
+
+  $('#form').submit(function (event) {
+    var formData = $('#form').serialize();
+    $.ajax({
+      url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeczX8zlGmozQRuF7nC3DOBJMcKGd-U8OpLTiVnoDBg99BZZQ/formResponse",
+      data: formData,
+      type: "POST",
+      dataType: "xml",
+      statusCode: {
+        0: function () {
+          $(".contact__page__apply__form__afterSend").slideDown();
+          $(".contact__sended").slideDown();
+          $(".c-form__wrapper").fadeOut();
+          $(".contact__page__detail ").fadeOut();
+          $('html,body').animate({scrollTop:$('.header').position().top})
+          //window.location.href = "thanks.html";
+        },
+        // 200: function () {
+        //   $(".false-message").slideDown();
+        // }
+      }
+    });
+    event.preventDefault();
+  });
+
+});
+
+
+//selectが requiredじゃない場合はjQueryを使う↓
+
+// <select class="is-empty"></select>としておく
+// jQuery(function($){
+//   const Target = $('.is-empty');
+//   $(Target).on('change', function(){
+//     if ($(Target).val() !== "選択してください"){
+//       $(this).removeClass('is-empty');
+//     } else {
+//       $(this).addClass('is-empty');
+//     }
+//   });
+// });
 

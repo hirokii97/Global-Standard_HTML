@@ -1,0 +1,77 @@
+@use "../global" as global;
+
+/* ========================
+header-top修正
+======================== */
+.contact-top{
+  background: url(../img/lower-mv-decoration_pc.png) no-repeat left/365px, url(../img/mv-contact_pc.png) no-repeat center/cover;
+  
+  @include global.mq('sp') {
+    background: url(../img/lower-mv-decoration_sp.png) no-repeat left/165px, url(../img/mv-contact_sp.png) no-repeat center/cover;
+}
+}
+
+
+/* ========================
+お問い合わせ
+======================== */
+
+.contact__page{
+  max-width: 708px;
+  width: 100%;
+  margin: 80px auto 120px auto;
+  padding: 0px 10px;
+  
+  @include global.mq('sp') {
+    margin: 60px auto 100px auto;
+    padding: 0px 20px;
+  }
+}
+
+//説明文
+.contact__page__detail{
+font-size: 14px;
+}
+
+
+//お問い合わせフォーム
+.contact__page__apply{
+  margin-top: 80px;
+  
+  @include global.mq('sp') {
+    margin-top: 60px;
+  }
+}
+
+.contact__page__apply__form__title{
+  text-align: center;
+  font-size: 24px;
+}
+
+.contact__form__content__tag__requiredTag{
+  margin-left: 6px;
+}
+
+/* ========================
+送信後メッセージ
+======================== */
+
+.contact__page__apply__form__afterSend{
+  font-size: 14px;
+  display: none;
+}
+
+.contact__page__apply__form__afterSend__sentenceArrow{
+  display: inline-block;
+  margin-top: 16px;
+}
+
+.contact__page__apply__form__afterSend__sentenceLink {
+  color: global.$main-color;
+  border-bottom: global.$main-color 1px solid;
+  margin-left: 8px;
+}
+
+.contact__sended{
+  display: none;
+}

@@ -1,51 +1,124 @@
 @use "../global" as global;
 
-.c-form__title{
-font-weight: 700;
+.c-form__title {
+  font-weight: 700;
 }
 
-.c-form__content{
+.c-form__content {
   margin-top: 32px;
   font-weight: 700;
-  
+
   @include global.mq('sp') {
     margin-top: 20px;
   }
 }
 
-.c-form__content__tag{
+.c-form__content__textarea {
+  height: 279px;
+
+  @include global.mq('sp') {
+    height: 169px;
+
+  }
+}
+
+.c-form__content__tag {
   font-size: 18px;
   display: inline-block;
   line-height: 26px;
   vertical-align: baseline;
-  
+
   @include global.mq('sp') {
     font-size: 14px;
   }
 }
 
-.c-form__content__box{
+//回答ボックス
+.c-form__content__box {
   height: 44px;
   width: 100%;
   margin-top: 13px;
-  
+  border-radius: 4px;
+  border: #DDDDDD 1px solid;
+
   @include global.mq('sp') {
     margin-top: 8px;
-    
+
   }
-  
-  input{
+
+  input,
+  select,
+  option {
     height: 44px;
     width: 100%;
     padding: 10px 0px 10px 16px;
-    // color: #CCCCCC;
     font-family: global.$ff-base;
     font-weight: 500;
-    
+
+    &::placeholder {
+      color: #CCCCCC;
+    }
   }
 }
 
-.c-form__content__requiredTag{
+textarea {
+  height: 240px;
+  width: 100%;
+  padding: 10px 0px 10px 16px;
+  font-family: global.$ff-base;
+  font-weight: 500;
+
+  @include global.mq('sp') {
+    height: 140px;
+
+  }
+
+  &::placeholder {
+    color: #CCCCCC;
+  }
+}
+
+//select用box
+.c-form__content__box__select {
+
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+    width: 11px;
+    height: 7px;
+    background: url(../img/select-arrow.png) center center / cover;
+    pointer-events: none;//マウス機能をなくして下にあるselectボックスに反応するようにする。
+  }
+
+  select {
+    appearance: none; //デフォルト矢印▼消す
+
+    &:invalid{
+      color: #CCCCCC;
+    }
+
+    & option {
+      color: black;
+  
+      &:first-child {
+        color: #CCCCCC;
+      }
+    }
+  }
+}
+
+//selectが requiredじゃない場合はjQueryを使う
+// select.is-empty{
+//   color: #CCCCCC;
+// }
+
+
+.c-form__content__requiredTag {
   display: inline;
   font-size: 12px;
   height: 20px;
@@ -60,7 +133,7 @@ font-weight: 700;
 
 
 //個人情報保護方針に同意します。
-.c-form__check{
+.c-form__check {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -70,21 +143,21 @@ font-weight: 700;
 }
 
 //checkbox
-.c-form__check__checkbox{
+.c-form__check__checkbox {
   width: 32px;
   height: 32px;
-  
-  input{
+
+  input {
     width: 32px;
     height: 32px;
   }
-  
+
   @include global.mq('sp') {
-    
+
     width: 28px;
     height: 28px;
-    
-    input{
+
+    input {
       width: 28px;
       height: 28px;
     }
@@ -92,7 +165,7 @@ font-weight: 700;
 }
 
 //個人情報保護方針
-.c-form__check__detail{
+.c-form__check__detail {
   border-bottom: #000 1px solid;
   line-height: 24px;
   vertical-align: bottom;
@@ -100,13 +173,13 @@ font-weight: 700;
 
 
 
-.c-form__sendBtn{
+.c-form__sendBtn {
   margin: 40px auto 0px auto;
   max-width: 336px;
 }
 
-.c-apply-sendBtn{
-  &.c-apply-btn::after{
+.c-apply-sendBtn {
+  &.c-apply-btn::after {
     height: 0;
   }
 }
@@ -119,14 +192,15 @@ font-weight: 700;
   position: relative;
   padding-left: 28px;
   cursor: pointer;
-  user-select: none; /* テキストの選択を防ぐ */
+  user-select: none;
+  /* テキストの選択を防ぐ */
   width: 32px;
   height: 32px;
-  
+
   @include global.mq('sp') {
     width: 28px;
     height: 28px;
-  
+
   }
 }
 
@@ -138,50 +212,68 @@ font-weight: 700;
 /* □ */
 .checkmark {
   position: absolute;
-  top: 0; /* 上からの位置 */
+  top: 0;
+  /* 上からの位置 */
   left: 0;
-  
-  height: 32px; /* 大きさ */
-  width: 32px; /* 大きさ */
+
+  height: 32px;
+  /* 大きさ */
+  width: 32px;
+  /* 大きさ */
 
   @include global.mq('sp') {
-    height: 28px; /* 大きさ */
-    width: 28px; /* 大きさ */
+    height: 28px;
+    /* 大きさ */
+    width: 28px;
+    /* 大きさ */
   }
-  border: solid 1px #3E3E3E; /* 線 */
+
+  border: solid 1px #3E3E3E;
+  /* 線 */
   // border-radius: 4px;
   box-sizing: border-box;
 }
+
 /* ✓ */
 .checkmark:after {
   content: "";
   position: absolute;
-  left: 30%; /* チェックの位置 */
-  top: -1%; /* チェックの位置 */
-  width: 13px; /* チェックの大きさ */
-  height: 24px; /* チェックの大きさ */
+  left: 30%;
+  /* チェックの位置 */
+  top: -1%;
+  /* チェックの位置 */
+  width: 13px;
+  /* チェックの大きさ */
+  height: 24px;
+  /* チェックの大きさ */
   border: solid global.$main-color;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
-  opacity: 0; /* 透明にしておく */
+  opacity: 0;
+  /* 透明にしておく */
 
   @include global.mq('sp') {
-    left: 33%; /* チェックの位置 */
-    top: -28%; /* チェックの位置 */
-    width: 15px; /* チェックの大きさ */
-    height: 29px; /* チェックの大きさ */
+    left: 33%;
+    /* チェックの位置 */
+    top: -28%;
+    /* チェックの位置 */
+    width: 15px;
+    /* チェックの大きさ */
+    height: 29px;
+    /* チェックの大きさ */
   }
 }
 
 /* チェックが入ったときの□ */
-.my-checkbox input:checked + .checkmark {
-  background: #FFF; /* チェック時の色 */
-  border-color: #2e80ff; /* チェック時の色 */
+.my-checkbox input:checked+.checkmark {
+  background: #FFF;
+  /* チェック時の色 */
+  border-color: #2e80ff;
+  /* チェック時の色 */
 }
 
 /* チェックが入ったときの✓ */
-.my-checkbox input:checked + .checkmark:after {
-  opacity: 1; /* 透明を解除 */
+.my-checkbox input:checked+.checkmark:after {
+  opacity: 1;
+  /* 透明を解除 */
 }
-
- 
